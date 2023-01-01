@@ -1,0 +1,126 @@
+
+//PDI
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        pdi(n);
+    }
+
+    public static void pdi(int n){
+        if(n==0){
+            return;
+        }
+        
+        System.out.println(n);
+        pdi(n-1);
+        System.out.println(n);
+        
+    }
+
+}
+
+//factorial
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(factorial(n));
+    }
+
+    public static int factorial(int n){
+        if(n==0){
+            return 1;
+        }
+        return n*factorial(n-1);
+    }
+
+}
+
+//fibonacci
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(fibonacci(n));
+    }
+
+    public static int fibonacci(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        if(n==2){
+            return 1;
+        }
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+}
+
+
+//nth odd fibonacci
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = (3*n-1)/2;
+        System.out.println(fibonacci(m));
+    }
+
+    public static int fibonacci(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        if(n==2){
+            return 1;
+        }
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+}
+
+//nth even fibonacci
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(fibonacci(n));
+    }
+
+    public static int fibonacci(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 2;
+        }
+        return (4*fibonacci(n-1) + fibonacci(n-2));
+    }
+
+}
+
